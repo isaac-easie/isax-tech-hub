@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="60" viewBox="0 0 240 60">
+  <rect rx="8" width="240" height="60" fill="#0f172a"/>
+  <g transform="translate(12,8)">
+    <circle cx="24" cy="22" r="18" fill="#10b981"/>
+    <path d="M14 20 L24 10 L34 20" stroke="#072f2e" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <text x="56" y="33" font-family="Segoe UI, sans-serif" font-size="18" fill="#22d3ee">iSAX</text>
+    <text x="110" y="33" font-family="Segoe UI, sans-serif" font-size="12" fill="#f1f5f9">Tech Hub</text>
+  </g>
+</svg>
