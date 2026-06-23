@@ -263,9 +263,9 @@ EMAIL_PASSWORD=your_password
 
 ## 📞 Contact & Support
 
-- Email: info@isaxtech.com
-- WhatsApp: +1234567890
-- Location: 123 Tech Street, Tech City
+- Email: isaacokonya1@gmail.com
+- WhatsApp: +256 785 874 322
+- Location: uganda
 
 ## 📄 License
 
