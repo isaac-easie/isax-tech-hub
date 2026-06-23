@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Portal - iSAX Tech Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>iSAX Tech Hub</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="learning-hub.html">Learning Hub</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="client-portal.html" class="btn-primary">Client Portal</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Client Portal</h1>
+            <p>Manage your orders and track progress</p>
+        </div>
+    </section>
+
+    <!-- Portal Section -->
+    <section class="portal-section">
+        <div class="container">
+            <!-- Login/Register Area -->
+            <div class="portal-auth" id="portalAuth">
+                <div class="auth-container">
+                    <h2>Welcome to Client Portal</h2>
+                    <p>Login to manage your orders and track progress</p>
+
+                    <div class="auth-tabs">
+                        <button class="tab-btn active" data-tab="login">Login</button>
+                        <button class="tab-btn" data-tab="register">Register</button>
+                    </div>
+
+                    <!-- Login Form -->
+                    <form class="auth-form" id="loginForm" style="display: block;">
+                        <div class="form-group">
+                            <label for="loginEmail">Email</label>
+                            <input type="email" id="loginEmail" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" id="loginPassword" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+
+                    <!-- Register Form -->
+                    <form class="auth-form" id="registerForm" style="display: none;">
+                        <div class="form-group">
+                            <label for="regName">Full Name</label>
+                            <input type="text" id="regName" name="fullname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regEmail">Email</label>
+                            <input type="email" id="regEmail" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regPassword">Password</label>
+                            <input type="password" id="regPassword" name="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regConfirm">Confirm Password</label>
+                            <input type="password" id="regConfirm" name="confirm" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Dashboard (Hidden until logged in) -->
+            <div class="portal-dashboard" id="portalDashboard" style="display: none;">
+                <div class="dashboard-header">
+                    <h2>Welcome, <span id="clientName">User</span>!</h2>
+                    <button class="btn btn-secondary" id="logoutBtn">Logout</button>
+                </div>
+
+                <div class="dashboard-grid">
+                    <!-- New Order Section -->
+                    <div class="dashboard-section">
+                        <h3><i class="fas fa-plus-circle"></i> Submit New Order</h3>
+                        <form class="order-form" id="newOrderForm">
+                            <div class="form-group">
+                                <label for="serviceType">Service Type</label>
+                                <select id="serviceType" name="service" required>
+                                    <option value="">Select Service</option>
+                                    <option value="CV Writing">CV Writing</option>
+                                    <option value="Cover Letter">Cover Letter</option>
+                                    <option value="Website">Website Development</option>
+                                    <option value="Logo Design">Logo Design</option>
+                                    <option value="PC Support">PC Support</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Description</label>
+                                <textarea id="description" name="description" rows="4" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="file">Upload File (Optional)</label>
+                                <input type="file" id="file" name="file">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit Order</button>
+                        </form>
+                    </div>
+
+                    <!-- Active Orders -->
+                    <div class="dashboard-section">
+                        <h3><i class="fas fa-tasks"></i> My Orders</h3>
+                        <div class="orders-list" id="ordersList">
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <h4>Order #001 - CV Writing</h4>
+                                    <span class="status status-progress">In Progress</span>
+                                </div>
+                                <p><strong>Submitted:</strong> June 1, 2026</p>
+                                <p><strong>Due:</strong> June 5, 2026</p>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 60%"></div>
+                                </div>
+                                <button class="btn btn-secondary">View Details</button>
+                            </div>
+
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <h4>Order #002 - Logo Design</h4>
+                                    <span class="status status-pending">Pending</span>
+                                </div>
+                                <p><strong>Submitted:</strong> May 30, 2026</p>
+                                <p><strong>Due:</strong> June 10, 2026</p>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 20%"></div>
+                                </div>
+                                <button class="btn btn-secondary">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Download Completed Work -->
+                    <div class="dashboard-section">
+                        <h3><i class="fas fa-download"></i> Completed Work</h3>
+                        <div class="completed-list" id="completedList">
+                            <div class="completed-item">
+                                <i class="fas fa-file"></i>
+                                <div>
+                                    <p><strong>CV_Professional.pdf</strong></p>
+                                    <p>Completed: May 25, 2026</p>
+                                </div>
+                                <a href="#" class="btn btn-secondary"><i class="fas fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Messages -->
+                    <div class="dashboard-section">
+                        <h3><i class="fas fa-envelope"></i> Messages</h3>
+                        <div class="messages-list" id="messagesList">
+                            <p>No new messages</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="portal-features">
+        <div class="container">
+            <h2>Portal Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-tasks"></i>
+                    <h3>Order Management</h3>
+                    <p>Submit and manage all your orders in one place</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-pie"></i>
+                    <h3>Track Progress</h3>
+                    <p>Real-time updates on your project status</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-download"></i>
+                    <h3>Download Files</h3>
+                    <p>Easy access to your completed deliverables</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Direct Messaging</h3>
+                    <p>Communicate directly with our team</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>iSAX Tech Hub</h3>
+                    <p>Your partner in digital solutions and learning.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 iSAX Tech Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/client-portal.js"></script>
+</body>
+</html>

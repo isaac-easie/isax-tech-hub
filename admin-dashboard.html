@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - iSAX Tech Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Admin Navigation -->
+    <nav class="admin-navbar">
+        <div class="admin-container">
+            <div class="admin-brand">
+                <h1>iSAX Tech Hub Admin</h1>
+            </div>
+            <div class="admin-user">
+                <span id="adminName">Administrator</span>
+                <button class="btn btn-secondary" id="adminLogout">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar Navigation -->
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="#dashboard" class="menu-item active"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+                <li><a href="#orders" class="menu-item"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+                <li><a href="#clients" class="menu-item"><i class="fas fa-users"></i> Clients</a></li>
+                <li><a href="#services" class="menu-item"><i class="fas fa-cog"></i> Services</a></li>
+                <li><a href="#portfolio" class="menu-item"><i class="fas fa-images"></i> Portfolio</a></li>
+                <li><a href="#blog" class="menu-item"><i class="fas fa-blog"></i> Blog Posts</a></li>
+                <li><a href="#messages" class="menu-item"><i class="fas fa-envelope"></i> Messages</a></li>
+                <li><a href="#testimonials" class="menu-item"><i class="fas fa-star"></i> Testimonials</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-content">
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="admin-section active">
+                <h2>Dashboard Overview</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-shopping-cart"></i>
+                        <div>
+                            <h3>Total Orders</h3>
+                            <p class="stat-number">156</p>
+                            <small>12 pending</small>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h3>Total Clients</h3>
+                            <p class="stat-number">89</p>
+                            <small>15 new this month</small>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Unread Messages</h3>
+                            <p class="stat-number">24</p>
+                            <small>Requires attention</small>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-dollar-sign"></i>
+                        <div>
+                            <h3>Monthly Revenue</h3>
+                            <p class="stat-number">$4,850</p>
+                            <small>Last 30 days</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-section">
+                    <h3>Recent Orders</h3>
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Client</th>
+                                <th>Service</th>
+                                <th>Status</th>
+                                <th>Amount</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#001</td>
+                                <td>John Doe</td>
+                                <td>CV Writing</td>
+                                <td><span class="status status-progress">In Progress</span></td>
+                                <td>$50</td>
+                                <td><button class="btn btn-small">View</button></td>
+                            </tr>
+                            <tr>
+                                <td>#002</td>
+                                <td>Jane Smith</td>
+                                <td>Website Dev</td>
+                                <td><span class="status status-pending">Pending</span></td>
+                                <td>$300</td>
+                                <td><button class="btn btn-small">View</button></td>
+                            </tr>
+                            <tr>
+                                <td>#003</td>
+                                <td>Ahmed Ibrahim</td>
+                                <td>Logo Design</td>
+                                <td><span class="status status-completed">Completed</span></td>
+                                <td>$100</td>
+                                <td><button class="btn btn-small">View</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Orders Section -->
+            <section id="orders" class="admin-section">
+                <h2>Manage Orders</h2>
+                <div class="section-toolbar">
+                    <input type="text" placeholder="Search orders...">
+                    <button class="btn btn-primary">+ New Order</button>
+                </div>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Client</th>
+                            <th>Service</th>
+                            <th>Status</th>
+                            <th>Due Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#001</td>
+                            <td>John Doe</td>
+                            <td>CV Writing</td>
+                            <td><span class="status status-progress">In Progress</span></td>
+                            <td>2026-06-05</td>
+                            <td>
+                                <button class="btn btn-small">Edit</button>
+                                <button class="btn btn-danger btn-small">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Clients Section -->
+            <section id="clients" class="admin-section">
+                <h2>Manage Clients</h2>
+                <div class="section-toolbar">
+                    <input type="text" placeholder="Search clients...">
+                    <button class="btn btn-primary">+ Add Client</button>
+                </div>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Orders</th>
+                            <th>Joined</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>john@example.com</td>
+                            <td>+1234567890</td>
+                            <td>5</td>
+                            <td>2026-01-15</td>
+                            <td>
+                                <button class="btn btn-small">Edit</button>
+                                <button class="btn btn-danger btn-small">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services" class="admin-section">
+                <h2>Manage Services</h2>
+                <button class="btn btn-primary">+ Add Service</button>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Service Name</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CV Writing</td>
+                            <td>Documents</td>
+                            <td>$50</td>
+                            <td>
+                                <button class="btn btn-small">Edit</button>
+                                <button class="btn btn-danger btn-small">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Portfolio Section -->
+            <section id="portfolio" class="admin-section">
+                <h2>Manage Portfolio</h2>
+                <button class="btn btn-primary">+ Add Project</button>
+                <div class="portfolio-grid-admin">
+                    <div class="portfolio-admin-card">
+                        <img src="assets/images/placeholder.png" alt="Project">
+                        <h3>E-Commerce Website</h3>
+                        <p>HTML • CSS • JavaScript</p>
+                        <button class="btn btn-small">Edit</button>
+                        <button class="btn btn-danger btn-small">Delete</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Blog Section -->
+            <section id="blog" class="admin-section">
+                <h2>Manage Blog Posts</h2>
+                <button class="btn btn-primary">+ New Post</button>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                            <th>Views</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Getting Started with Web Development</td>
+                            <td>Admin</td>
+                            <td>Tutorial</td>
+                            <td>Published</td>
+                            <td>245</td>
+                            <td>
+                                <button class="btn btn-small">Edit</button>
+                                <button class="btn btn-danger btn-small">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Messages Section -->
+            <section id="messages" class="admin-section">
+                <h2>Contact Messages</h2>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>From</th>
+                            <th>Email</th>
+                            <th>Service</th>
+                            <th>Message</th>
+                            <th>Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Smith</td>
+                            <td>john@example.com</td>
+                            <td>Web Development</td>
+                            <td>Interested in website design...</td>
+                            <td>2026-06-02</td>
+                            <td>
+                                <button class="btn btn-small">Reply</button>
+                                <button class="btn btn-danger btn-small">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section id="testimonials" class="admin-section">
+                <h2>Manage Testimonials</h2>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Client Name</th>
+                            <th>Rating</th>
+                            <th>Message</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jane Doe</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>Great service and professional work!</td>
+                            <td>Approved</td>
+                            <td>
+                                <button class="btn btn-danger btn-small">Remove</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

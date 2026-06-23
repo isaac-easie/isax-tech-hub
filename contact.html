@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - iSAX Tech Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>iSAX Tech Hub</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="learning-hub.html">Learning Hub</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="client-portal.html" class="btn-primary">Client Portal</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch with our team</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2>Send us a Message</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="CV Writing">CV Writing</option>
+                                <option value="Web Development">Web Development</option>
+                                <option value="Graphic Design">Graphic Design</option>
+                                <option value="IT Support">IT Support</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2>Contact Me</h2>
+
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:isaacokonya1@gmail.com">isaacokonya1@gmail.com</a></p>
+                            <p><small>Response time: Within 24 hours</small></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+256 785 874 322</p>
+                            <p><small>Mon-Fri, 9AM-6PM</small></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://wa.me/256785874322" target="_blank">Message on WhatsApp</a></p>
+                            <p><small>Quick responses</small></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h4>GitHub</h4>
+                            <p><a href="https://github.com/isaacokonya" target="_blank">@isaacokonya</a></p>
+                            <p><small>Check out my projects</small></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p><a href="https://linkedin.com/in/isaacokonya" target="_blank">Isaac Okonya</a></p>
+                            <p><small>Connect professionally</small></p>
+                        </div>
+                    </div>
+
+                    <div class="social-links-contact">
+                        <h4>Follow On Social Media</h4>
+                        <div class="social-icons">
+                            <a href="https://github.com/isaacokonya" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://twitter.com/isaacokonya" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://instagram.com/isaacokonya" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://linkedin.com/in/isaacokonya" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Response Time Info -->
+    <section class="response-time">
+        <div class="container">
+            <div class="response-card">
+                <i class="fas fa-clock"></i>
+                <h3>Quick Response</h3>
+                <p>We typically respond within 24 hours</p>
+            </div>
+            <div class="response-card">
+                <i class="fas fa-check-circle"></i>
+                <h3>Professional Support</h3>
+                <p>Expert team ready to assist you</p>
+            </div>
+            <div class="response-card">
+                <i class="fas fa-handshake"></i>
+                <h3>Customer Care</h3>
+                <p>Your satisfaction is our priority</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>iSAX Tech Hub</h3>
+                    <p>Your partner in digital solutions and learning.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/portfolio">Portfolio</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 iSAX Tech Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>
